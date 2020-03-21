@@ -12,5 +12,5 @@ try:
             print("yes")
         else:
             print("no")
-except:
+except:    
     pass
