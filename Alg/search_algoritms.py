@@ -95,10 +95,39 @@ def jump_search(arr, x):
     return -1
 
 
+@timer
+def binary_search_ru(arr,l,r, x):
+    """ 
+    Binary Search Recursive. (sorted arrays)
+    Time complexity of above algorithm is O(1)
+
+    Parameters: 
+    binary_search_ru(arr, x): 
+    arr : list of elements
+    x   : element to be found 
+  
+    Returns: 
+    int : Index of the element 
+    -1  : Element Not Found 
+    """
+    if r >= l: 
+        mid = l + (r - l) // 2
+        if arr[mid] == x: 
+            return mid 
+        elif arr[mid] > x: 
+            return binary_search_ru(arr, l, mid-1, x) 
+        else: 
+            return binary_search_ru(arr, mid + 1, r, x) 
+    else: 
+        return -1
+  
+
+
 # Test Case
 arr = [i for i in range(0,500,2) ]
-x = 401
+x = 402
 
-print(linear_search(arr,x))
-print(binary_search(arr,x))
-print(jump_search(arr,x))
+# print(linear_search(arr,x))
+# print(binary_search(arr,x))
+# print(jump_search(arr,x))
+print(binary_search_ru(arr,0,len(arr),x))
