@@ -33,3 +33,4 @@ Blue (4kyu & 3kyu)
 Competent	32
 Purple (2kyu & 1kyu)
 Proficient	128
+ok
