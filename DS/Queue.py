@@ -37,7 +37,3 @@ cq.enqueue(3)
 print(cq)
 
 '''
-
-import queue as q
-
-cq = q.Queue(maxsize=3)
