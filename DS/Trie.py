@@ -12,7 +12,6 @@ class TrieNode:
         self.children = dict()
         self.is_word = False
 
-
 class PrefixTree:
     def __init__(self):
         self.root = TrieNode()
