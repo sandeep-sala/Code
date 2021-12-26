@@ -1,4 +1,5 @@
 try:
+    
     for _ in range(  int(input()) ):
         k = int(input())
         c = 64 - k
