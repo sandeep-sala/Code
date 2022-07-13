@@ -1,4 +1,4 @@
-def solve_knights_tour(n,x,y):    
+def solve_knights_tour(n,x,y):
     board = [[-1 for i in range(n)]for j in range(n)]
     solve_knights_tour_helper(n,board,x,y,0)
     for i in range(n):
