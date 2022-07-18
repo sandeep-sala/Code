@@ -1,3 +1,14 @@
+MOVES = [
+    (1,2), #1 Top Right
+    (2,1), #2 Right Top
+    (2,-1), #3 Right Bottom
+    (1,-2), #4 Bottom Right
+    (-1,-2), #5 Bottom Left
+    (-2,-1), #6 Left Bottom
+    (-2,1), #7 Left Top
+    (-1,2), #8 Top Left
+]
+
 def solve_knights_tour(n,x,y):
     board = [[-1 for i in range(n)]for j in range(n)]
     solve_knights_tour_helper(n,board,x,y,0)
@@ -5,7 +16,7 @@ def solve_knights_tour(n,x,y):
         for j in range(n):
             print(board[i][j], end=' ')
         print()
-    
+
 
 def solve_knights_tour_helper(n,board,x,y,count):
     if count == n*n: return True
@@ -17,6 +28,5 @@ def solve_knights_tour_helper(n,board,x,y,count):
     board[x][y] = -1
     return False
 
-if __name__ == "__main__":
-    n = 8
-    solve_knights_tour(n,0,0)
+
+solve_knights_tour(8,0,0)
